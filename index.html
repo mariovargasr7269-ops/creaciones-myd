@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4A9B8E">
+<meta name="description" content="Creaciones MyD · Impresión 3D FDM y diseño personalizado. Piezas únicas, regalos personalizados, prototipos y repuestos a tu medida. Calidad y creatividad en cada impresión.">
+<meta name="author" content="Creaciones MyD">
+<meta name="keywords" content="impresión 3D, FDM, piezas personalizadas, regalos personalizados, prototipos 3D, Venezuela, Creaciones MyD, diseño 3D">
+<meta name="robots" content="index, follow">
+
+<title>Creaciones MyD · Impresión 3D & Diseño Personalizado</title>
+
+<!-- Iconos -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="logo-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="logo-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Open Graph (WhatsApp / Facebook / Telegram) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Creaciones MyD">
+<meta property="og:title" content="Creaciones MyD · Impresión 3D & Diseño Personalizado">
+<meta property="og:description" content="Piezas únicas, regalos personalizados, prototipos y repuestos a tu medida. Calidad y creatividad en cada impresión 3D.">
+<meta property="og:url" content="https://creacionesmyd.vercel.app">
+<meta property="og:image" content="https://creacionesmyd.vercel.app/og-image.png">
+<meta property="og:image:secure_url" content="https://creacionesmyd.vercel.app/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo de Creaciones MyD - Impresión 3D & Diseño">
+<meta property="og:locale" content="es_VE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="es_MX">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creaciones MyD · Impresión 3D & Diseño Personalizado">
+<meta name="twitter:description" content="Piezas únicas, regalos personalizados y prototipos a tu medida. Calidad y creatividad en cada impresión 3D.">
+<meta name="twitter:image" content="https://creacionesmyd.vercel.app/og-image.png">
+<meta name="twitter:image:alt" content="Creaciones MyD - Impresión 3D">
+
+<!-- ===== CONFIGURA AQUÍ TUS DATOS =====
+     Reemplaza los valores de estos JS variables con tus datos reales -->
+<script>
+window.MYD = {
+  telefono: '+58 412-3456789',           // ← tu número real
+  telefonoLink: '584123456789',          // ← solo dígitos, sin + ni espacios
+  whatsapp: '584123456789',              // ← tu WhatsApp (solo dígitos)
+  email: 'contacto@creacionesmyd.com',  // ← tu email
+  instagram: 'creaciones.myd',          // ← tu usuario de Instagram (sin @)
+  facebook: 'creaciones.myd',            // ← tu página de Facebook
+  tiktok: 'creaciones.myd',             // ← tu usuario de TikTok
+  direccion: 'Caracas, Venezuela',      // ← tu ubicación
+  horarios: 'Lun a Vie: 9am - 6pm · Sáb: 9am - 2pm'
+};
+</script>
+
+<style>
+:root{
+  /* === Paleta basada en tu logo === */
+  --teal:#4A9B8E;        /* Color primario del logo */
+  --teal-dark:#3D7A70;
+  --teal-light:#5BAFA0;
+  --teal-pale:#E4F5F2;
+  --purple:#B528A0;      /* Acento morado del logo */
+  --purple-dark:#8E1F7E;
+  --orange:#E87A3F;      /* Acento naranja del logo */
+  --orange-light:#F08A4D;
+  --orange-pale:#FFF0E6;
+  --green-water:#6DBFB0;
+  /* === Neutros === */
+  --bg:#F7F5F2;          /* Crema cálido (fondo) */
+  --bg-alt:#FFFFFF;
+  --card:#FFFFFF;
+  --txt:#1F2937;
+  --txt-soft:#4B5563;
+  --mut:#6B7280;
+  --line:#E5E7EB;
+  /* === Efectos === */
+  --r:20px;
+  --r-sm:14px;
+  --r-lg:28px;
+  --shadow-sm:0 2px 8px rgba(74,155,142,.08);
+  --shadow:0 8px 24px rgba(74,155,142,.12);
+  --shadow-lg:0 20px 50px rgba(74,155,142,.18);
+  --shadow-purple:0 8px 24px rgba(181,40,160,.18);
+  --shadow-orange:0 8px 24px rgba(232,122,63,.2);
+  /* === Degradados intensificados (sin desaparecer el color base) === */
+  /* Degradado principal: teal metálico → verde agua (más profundo y vibrante) */
+  --gradient-main:linear-gradient(135deg,#3D7A70 0%,#4A9B8E 25%,#5BAFA0 55%,#6DBFB0 80%,#8DD3C5 100%);
+  /* Degradado cálido: naranja → morado (más dramatic) */
+  --gradient-warm:linear-gradient(135deg,#E87A3F 0%,#EC6090 35%,#B528A0 70%,#8E1F7E 100%);
+  /* Degradado mixto: teal → naranja → morado (completo del logo) */
+  --gradient-mix:linear-gradient(135deg,#4A9B8E 0%,#5BAFA0 20%,#E87A3F 50%,#B528A0 80%,#8E1F7E 100%);
+  /* Degradado hero (más vibrante, con 5 paradas de color) */
+  --gradient-hero:linear-gradient(135deg,#3D7A70 0%,#4A9B8E 20%,#6DBFB0 35%,#E87A3F 65%,#B528A0 90%,#8E1F7E 100%);
+  /* Degradado para botones hover */
+  --gradient-btn-hover:linear-gradient(135deg,#5BAFA0 0%,#6DBFB0 50%,#E87A3F 100%);
+  --glass-bg:linear-gradient(135deg,rgba(255,255,255,.85),rgba(244,255,252,.65));
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--txt);
+  font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+  font-size:17px;line-height:1.6;
+  overflow-x:hidden;
+}
+a{color:var(--teal-dark);text-decoration:none;transition:color .2s}
+a:hover{color:var(--orange)}
+img{max-width:100%;display:block}
+
+/* === NAVBAR === */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(16px) saturate(180%);
+  backdrop-filter:blur(16px) saturate(180%);
+  border-bottom:1px solid rgba(74,155,142,.15);
+  transition:box-shadow .3s;
+}
+.nav.scrolled{box-shadow:0 4px 20px rgba(74,155,142,.1)}
+.nav-inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;
+}
+.nav .brand{display:flex;align-items:center;gap:14px}
+.nav .brand img{width:48px;height:48px;border-radius:50%;box-shadow:0 4px 12px rgba(74,155,142,.25)}
+.nav .brand-txt b{font-size:18px;font-weight:800;color:var(--txt);display:block;line-height:1.1}
+.nav .brand-txt small{font-size:12px;color:var(--teal);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.nav .links{display:flex;align-items:center;gap:8px}
+.nav .links a{
+  padding:9px 14px;border-radius:10px;font-weight:600;font-size:15px;
+  color:var(--txt-soft);transition:all .2s;
+}
+.nav .links a:hover{background:var(--teal-pale);color:var(--teal-dark)}
+.nav .cta{display:flex;gap:10px;align-items:center}
+.nav .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav .burger span{display:block;width:24px;height:2px;background:var(--txt);margin:5px 0;transition:.3s}
+
+/* === HERO === */
+.hero{
+  position:relative;
+  padding:140px 24px 100px;
+  overflow:hidden;
+  background:var(--gradient-hero);
+  background-size:200% 200%;
+  animation:gradientShift 15s ease infinite;
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.hero::before{
+  /* Onda blanca en la parte inferior (estilo del logo) */
+  content:'';position:absolute;bottom:-1px;left:0;right:0;height:120px;
+  background:var(--bg);
+  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0,60 C320,120 480,0 720,40 C960,80 1120,10 1440,50 L1440,120 L0,120 Z' fill='%23fff'/></svg>") no-repeat center bottom / 100% 100%;
+  mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0,60 C320,120 480,0 720,40 C960,80 1120,10 1440,50 L1440,120 L0,120 Z' fill='%23fff'/></svg>") no-repeat center bottom / 100% 100%;
+}
+.hero-inner{
+  position:relative;max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;
+  color:#fff;
+}
+.hero .badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.22);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1.5px solid rgba(255,255,255,.35);
+  padding:8px 16px;border-radius:99px;
+  font-size:13px;font-weight:700;letter-spacing:.05em;
+  margin-bottom:24px;
+}
+.hero h1{
+  font-size:clamp(34px,5vw,56px);
+  line-height:1.1;margin-bottom:20px;font-weight:900;letter-spacing:-0.02em;
+  text-shadow:0 4px 24px rgba(0,0,0,.15);
+}
+.hero .lead{
+  font-size:clamp(17px,2vw,20px);
+  opacity:.95;margin-bottom:32px;line-height:1.5;max-width:580px;
+}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hero .stats{display:flex;gap:36px;flex-wrap:wrap}
+.hero .stat b{font-size:32px;display:block;line-height:1;font-weight:900;text-shadow:0 2px 8px rgba(0,0,0,.2)}
+.hero .stat small{font-size:13px;opacity:.9;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+
+/* Phone mockup con logo */
+.hero .logo-mock{
+  position:relative;
+  display:flex;justify-content:center;align-items:center;
+}
+.hero .logo-circle{
+  width:min(420px,80%);aspect-ratio:1;
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  border:1.5px solid rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.25);
+  position:relative;
+}
+.hero .logo-circle::before{
+  content:'';position:absolute;inset:-20px;border-radius:50%;
+  border:2px dashed rgba(255,255,255,.4);
+  animation:spin 30s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .logo-circle img{width:75%;height:75%;object-fit:contain;border-radius:50%;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+
+/* Esferas decorativas flotantes (estilo logo) */
+.float-orb{
+  position:absolute;border-radius:50%;
+  box-shadow:0 8px 20px rgba(0,0,0,.2),inset 0 4px 12px rgba(255,255,255,.5);
+}
+.orb-1{width:60px;height:60px;background:var(--purple);top:10%;right:5%;animation:float 4s ease-in-out infinite}
+.orb-2{width:42px;height:42px;background:var(--orange);bottom:15%;left:0%;animation:float 3s ease-in-out infinite .5s}
+.orb-3{width:32px;height:32px;background:var(--green-water);top:60%;right:0%;animation:float 3.5s ease-in-out infinite 1s}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+
+/* === SECTION TITLE === */
+.sec-head{
+  text-align:center;max-width:720px;margin:0 auto 56px;padding:0 24px;
+}
+.sec-head .eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--teal-pale);color:var(--teal-dark);
+  padding:6px 14px;border-radius:99px;
+  font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:16px;
+}
+.sec-head h2{
+  font-size:clamp(28px,4vw,42px);
+  margin-bottom:14px;font-weight:900;letter-spacing:-0.02em;line-height:1.15;color:var(--txt);
+}
+.sec-head p{color:var(--mut);font-size:17px;line-height:1.55}
+
+/* === SECTION GENERIC === */
+section{padding:100px 24px;position:relative}
+.container{max-width:1280px;margin:0 auto}
+
+/* === SERVICIOS === */
+#servicios{background:var(--bg-alt)}
+.services-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;
+}
+.scard{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:32px 28px;
+  box-shadow:var(--shadow-sm);
+  position:relative;overflow:hidden;
+  transition:transform .25s,box-shadow .25s;
+}
+.scard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--gradient-main);
+  background-size:200% 200%;
+}
+.scard:nth-child(2)::before{
+  background:var(--gradient-warm);
+  background-size:200% 200%;
+}
+.scard:nth-child(3)::before{
+  background:linear-gradient(135deg,var(--purple),var(--purple-dark),var(--orange));
+  background-size:200% 200%;
+}
+.scard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.scard .ico{
+  width:64px;height:64px;border-radius:18px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;margin-bottom:20px;
+  background:var(--teal-pale);
+}
+.scard:nth-child(2) .ico{background:var(--orange-pale)}
+.scard:nth-child(3) .ico{background:#F5E4F0}
+.scard h3{font-size:22px;margin-bottom:10px;font-weight:800;letter-spacing:-0.01em}
+.scard p{color:var(--mut);font-size:15px;line-height:1.55;margin-bottom:18px}
+.scard ul{list-style:none;padding:0;margin:0}
+.scard ul li{
+  padding:8px 0 8px 28px;position:relative;font-size:14.5px;color:var(--txt-soft);
+  font-weight:500;
+}
+.scard ul li::before{
+  content:'✓';position:absolute;left:0;top:8px;color:var(--teal);font-weight:900;
+}
+.scard .price{
+  margin-top:20px;padding-top:18px;border-top:1px dashed var(--line);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.scard .price small{color:var(--mut);font-size:13px;font-weight:600}
+.scard .price b{color:var(--teal-dark);font-size:18px;font-weight:800}
+
+/* === CATÁLOGO === */
+#catalogo{background:linear-gradient(180deg,var(--bg) 0%,var(--teal-pale) 100%)}
+.catalog-filters{
+  display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;
+}
+.chip{
+  padding:9px 18px;border-radius:99px;
+  background:#fff;border:1.5px solid var(--line);
+  font-size:14px;font-weight:700;color:var(--txt-soft);
+  cursor:pointer;transition:all .2s;
+}
+.chip:hover{border-color:var(--teal);color:var(--teal-dark)}
+.chip.active{
+  background:var(--gradient-main);color:#fff;border-color:transparent;
+  box-shadow:0 4px 12px rgba(74,155,142,.3);
+}
+.products-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;
+}
+.pcard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--shadow-sm);
+  transition:transform .25s,box-shadow .25s;
+  display:flex;flex-direction:column;
+}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.pcard .img{
+  aspect-ratio:1;
+  background:linear-gradient(135deg,var(--teal-pale),var(--orange-pale));
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.pcard .img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s ease;
+}
+.pcard:hover .img img{transform:scale(1.08)}
+.pcard .img::after{
+  /* Overlay gradiente sutil al pasar mouse */
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(74,155,142,.15));
+  opacity:0;transition:opacity .3s;
+}
+.pcard:hover .img::after{opacity:1}
+.pcard .img .emoji{font-size:80px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.15))}
+.pcard .tag{
+  position:absolute;top:12px;left:12px;
+  background:rgba(255,255,255,.95);color:var(--purple-dark);
+  padding:5px 11px;border-radius:99px;font-size:11px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.05em;
+}
+.pcard .tag.hot{background:var(--orange);color:#fff}
+.pcard .tag.new{background:var(--teal);color:#fff}
+.pcard .body{padding:20px 18px;flex:1;display:flex;flex-direction:column}
+.pcard h3{font-size:17px;margin-bottom:6px;font-weight:700;line-height:1.3}
+.pcard .desc{color:var(--mut);font-size:13.5px;line-height:1.5;margin-bottom:14px;flex:1}
+.pcard .price-row{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:14px;
+}
+.pcard .price{font-size:22px;font-weight:900;color:var(--teal-dark);letter-spacing:-0.01em}
+.pcard .price small{font-size:13px;color:var(--mut);font-weight:500;text-decoration:line-through;margin-right:6px}
+.pcard .btn-consultar{
+  display:block;width:100%;text-align:center;
+  padding:13px;border-radius:12px;
+  background:var(--gradient-warm);color:#fff;
+  font-size:15px;font-weight:800;
+  border:none;cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+}
+.pcard .btn-consultar:hover{transform:translateY(-2px);box-shadow:var(--shadow-orange)}
+
+/* === PROCESO === */
+#proceso{background:var(--bg-alt)}
+.steps-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;
+  position:relative;
+}
+.step{
+  text-align:center;padding:28px 20px;
+  position:relative;
+}
+.step .num{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--gradient-main);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:900;
+  margin:0 auto 18px;
+  box-shadow:0 8px 20px rgba(74,155,142,.35);
+}
+.step:nth-child(2) .num{background:var(--gradient-warm);box-shadow:0 8px 20px rgba(232,122,63,.35)}
+.step:nth-child(3) .num{background:linear-gradient(135deg,var(--purple),var(--purple-dark));box-shadow:0 8px 20px rgba(181,40,160,.35)}
+.step:nth-child(4) .num{background:linear-gradient(135deg,var(--green-water),var(--teal));box-shadow:0 8px 20px rgba(109,191,176,.4)}
+.step h3{font-size:18px;margin-bottom:10px;font-weight:800}
+.step p{color:var(--mut);font-size:14.5px;line-height:1.5}
+
+/* === POR QUÉ ELEGIRNOS === */
+#por-que{background:var(--bg)}
+.why-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;
+}
+.wcard{
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border:1px solid rgba(74,155,142,.2);
+  border-radius:var(--r);padding:28px 24px;
+  box-shadow:var(--shadow-sm);
+  text-align:center;
+  transition:transform .25s;
+}
+.wcard:hover{transform:translateY(-4px)}
+.wcard .ico{
+  width:64px;height:64px;border-radius:18px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;margin:0 auto 16px;
+  background:linear-gradient(135deg,var(--teal-pale),var(--orange-pale));
+  box-shadow:inset 0 2px 4px rgba(255,255,255,.8);
+}
+.wcard h3{font-size:17px;margin-bottom:8px;font-weight:700}
+.wcard p{color:var(--mut);font-size:14px;line-height:1.5}
+
+/* === CTA SECTION === */
+.cta-band{
+  background:var(--gradient-mix);
+  background-size:200% 200%;
+  animation:gradientShift 12s ease infinite;
+  border-radius:var(--r-lg);
+  padding:60px 40px;
+  text-align:center;color:#fff;
+  position:relative;overflow:hidden;
+  max-width:1100px;margin:0 auto;
+  box-shadow:var(--shadow-lg);
+}
+.cta-band::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
+}
+.cta-band h2{font-size:clamp(26px,4vw,38px);margin-bottom:12px;font-weight:900;letter-spacing:-0.02em}
+.cta-band p{font-size:18px;opacity:.95;margin-bottom:28px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-band .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* === CONTACTO / REDES === */
+#contacto{background:var(--bg-alt)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;
+}
+.contact-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:32px 28px;box-shadow:var(--shadow);
+}
+.contact-card h3{font-size:24px;margin-bottom:8px;font-weight:800}
+.contact-card .sub{color:var(--mut);font-size:15px;margin-bottom:24px}
+.contact-row{
+  display:flex;align-items:center;gap:14px;padding:14px 0;
+  border-bottom:1px solid var(--line);
+}
+.contact-row:last-child{border-bottom:none}
+.contact-row .ico{
+  width:48px;height:48px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;background:var(--teal-pale);flex-shrink:0;
+}
+.contact-row:nth-child(2) .ico{background:var(--orange-pale)}
+.contact-row:nth-child(3) .ico{background:#E0F7FA}
+.contact-row:nth-child(4) .ico{background:#F5E4F0}
+.contact-row .info b{display:block;font-size:15.5px;font-weight:700;color:var(--txt)}
+.contact-row .info small{color:var(--mut);font-size:13.5px}
+.contact-row .info a{color:var(--teal-dark);font-weight:600}
+
+.social-card{
+  background:var(--gradient-warm);
+  background-size:200% 200%;
+  animation:gradientShift 18s ease infinite;
+  border-radius:var(--r);
+  padding:32px 28px;
+  color:#fff;
+  box-shadow:0 8px 24px rgba(181,40,160,.25);
+}
+.social-card h3{font-size:24px;margin-bottom:8px;font-weight:800}
+.social-card .sub{opacity:.95;font-size:15px;margin-bottom:24px}
+.social-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.social-btn{
+  display:flex;align-items:center;gap:12px;
+  padding:16px 18px;border-radius:14px;
+  background:rgba(255,255,255,.18);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border:1.5px solid rgba(255,255,255,.3);
+  color:#fff;font-weight:700;font-size:15px;
+  transition:all .2s;
+}
+.social-btn:hover{background:rgba(255,255,255,.3);transform:translateY(-2px)}
+.social-btn .ico{font-size:24px}
+.social-btn small{display:block;font-size:12px;opacity:.85;font-weight:500}
+
+/* === FOOTER === */
+footer{
+  background:#1F2937;color:#fff;padding:60px 24px 30px;
+}
+.foot-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;
+}
+.foot-brand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.foot-brand img{width:54px;height:54px;border-radius:50%}
+.foot-brand b{font-size:18px;font-weight:800}
+.foot-brand small{display:block;font-size:13px;opacity:.7}
+footer p{color:rgba(255,255,255,.7);font-size:14px;line-height:1.6}
+footer h4{font-size:15px;font-weight:800;margin-bottom:14px;color:#fff;letter-spacing:.05em;text-transform:uppercase}
+footer ul{list-style:none}
+footer ul li{padding:6px 0}
+footer ul li a{color:rgba(255,255,255,.7);font-size:14px;transition:color .2s}
+footer ul li a:hover{color:var(--orange-light)}
+.foot-bottom{
+  max-width:1280px;margin:40px auto 0;
+  padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  font-size:13px;color:rgba(255,255,255,.6);
+}
+.foot-bottom a{color:rgba(255,255,255,.6)}
+
+/* === BOTONES === */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 26px;border-radius:14px;
+  font-size:16px;font-weight:800;text-decoration:none;
+  cursor:pointer;border:none;transition:all .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:active{transform:scale(.97)}
+.btn-white{background:#fff;color:var(--teal-dark);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+.btn-white:hover{box-shadow:0 12px 28px rgba(0,0,0,.2);transform:translateY(-2px)}
+.btn-ghost-w{
+  background:rgba(255,255,255,.15);color:#fff;
+  border:1.5px solid rgba(255,255,255,.4);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.btn-ghost-w:hover{background:rgba(255,255,255,.25);transform:translateY(-2px)}
+.btn-primary{
+  background:var(--gradient-main);color:#fff;
+  box-shadow:0 8px 20px rgba(74,155,142,.3);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(74,155,142,.4)}
+.btn-warm{
+  background:var(--gradient-warm);color:#fff;
+  box-shadow:0 8px 20px rgba(232,122,63,.3);
+}
+.btn-warm:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(232,122,63,.4)}
+.btn-whatsapp{
+  background:#25D366;color:#fff;
+  box-shadow:0 8px 20px rgba(37,211,102,.3);
+}
+.btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,211,102,.4)}
+
+/* === WHATSAPP FLOTANTE === */
+.wa-float{
+  position:fixed;bottom:24px;right:24px;z-index:200;
+  width:60px;height:60px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;
+  box-shadow:0 8px 24px rgba(37,211,102,.5);
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.1) rotate(-5deg)}
+.wa-float::before{
+  content:'';position:absolute;inset:0;border-radius:50%;
+  background:#25D366;animation:pulse 2s infinite;
+  z-index:-1;
+}
+@keyframes pulse{
+  0%{transform:scale(1);opacity:.7}
+  100%{transform:scale(1.8);opacity:0}
+}
+
+/* === MOBILE === */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;gap:40px}
+  .hero .actions,.hero .stats{justify-content:center}
+  .hero .lead{margin-left:auto;margin-right:auto}
+  .contact-grid{grid-template-columns:1fr}
+  .foot-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:680px){
+  .nav .links{display:none}
+  .nav .links.open{
+    display:flex;flex-direction:column;
+    position:absolute;top:100%;left:0;right:0;
+    background:#fff;padding:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    gap:4px;
+  }
+  .nav .links.open a{padding:12px 16px;border-radius:8px;width:100%}
+  .nav .burger{display:block}
+  section{padding:60px 16px}
+  .hero{padding:120px 16px 80px}
+  .hero .stats{gap:20px}
+  .cta-band{padding:40px 24px}
+  .foot-inner{grid-template-columns:1fr;gap:30px}
+  .foot-bottom{flex-direction:column;text-align:center}
+  .scard{padding:24px 20px}
+  .contact-card,.social-card{padding:24px 20px}
+  .social-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="brand">
+      <img src="logo-512.png" alt="Creaciones MyD">
+      <div class="brand-txt">
+        <b>Creaciones MyD</b>
+        <small>Impresión 3D & Diseño</small>
+      </div>
+    </a>
+    <div class="links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#por-que">Por qué nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#" id="navConsultar">💬 Consultar</a>
+      <button class="burger" id="burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge">✨ Diseño & Innovación · Impresión 3D</span>
+      <h1>Tus ideas impresas en 3D, hechas realidad</h1>
+      <p class="lead">Piezas personalizadas, regalos únicos y prototipos a tu medida. Calidad, creatividad y rapidez en cada impresión. Hecho en Venezuela con pasión por el detalle.</p>
+      <div class="actions">
+        <a class="btn btn-white" href="#catalogo">🎨 Ver catálogo</a>
+        <a class="btn btn-ghost-w" href="#" id="heroConsultar">💬 Pedir por WhatsApp</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>+500</b><small>Piezas impresas</small></div>
+        <div class="stat"><b>+200</b><small>Clientes felices</small></div>
+        <div class="stat"><b>24h</b><small>Entrega rápida</small></div>
+        <div class="stat"><b>4.9★</b><small>Calificación</small></div>
+      </div>
+    </div>
+    <div class="logo-mock">
+      <div class="logo-circle">
+        <img src="logo-512.png" alt="Creaciones MyD">
+      </div>
+      <div class="float-orb orb-1"></div>
+      <div class="float-orb orb-2"></div>
+      <div class="float-orb orb-3"></div>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Servicios</span>
+      <h2>Lo que podemos crear para ti</h2>
+      <p>Soluciones completas en impresión 3D FDM, desde una pieza única hasta producciones cortas. Calidad profesional con acabados que enamoran.</p>
+    </div>
+    <div class="services-grid">
+      <div class="scard">
+        <div class="ico">🖨️</div>
+        <h3>Impresión 3D FDM</h3>
+        <p>Piezas funcionales, prototipos y repuestos impresos con filamento de alta calidad. PLA, ABS, PETG, TPU y más materiales.</p>
+        <ul>
+          <li>Resolución desde 0.12mm</li>
+          <li>Volumen hasta 300×300×400mm</li>
+          <li>Multi-color disponible</li>
+          <li>Acabados y post-procesado</li>
+        </ul>
+        <div class="price">
+          <small>Desde</small>
+          <b>$5 USD</b>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="ico">🎨</div>
+        <h3>Piezas Personalizadas</h3>
+        <p>Diseñamos y imprimimos esa pieza que tienes en mente. Regalos únicos, decoración, llaveros, figuras y mucho más.</p>
+        <ul>
+          <li>Diseño 3D incluido</li>
+          <li>Asesoría sin costo</li>
+          <li>Personalización total</li>
+          <li>Para cualquier ocasión</li>
+        </ul>
+        <div class="price">
+          <small>Desde</small>
+          <b>$10 USD</b>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="ico">⚙️</div>
+        <h3>Repuestos y Prototipos</h3>
+        <p>¿Necesitas un repuesto que ya no se consigue? ¿Un prototipo para tu proyecto? Lo modelamos e imprimimos a tu medida.</p>
+        <ul>
+          <li>Repuestos funcionales</li>
+          <li>Prototipos rápidos</li>
+          <li>Ingeniería inversa</li>
+          <li>Optimización de diseño</li>
+        </ul>
+        <div class="price">
+          <small>Desde</small>
+          <b>$15 USD</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Catálogo</span>
+      <h2>Productos disponibles</h2>
+      <p>Una selección de nuestras piezas más solicitadas. ¿No ves lo que buscas? Escríbenos y lo creamos por ti.</p>
+    </div>
+    <div class="catalog-filters">
+      <button class="chip active" data-cat="all">✨ Todo</button>
+      <button class="chip" data-cat="llaveros">🔑 Llaveros</button>
+      <button class="chip" data-cat="figuras">🐲 Figuras articuladas</button>
+      <button class="chip" data-cat="tendencias">⭐ Tendencias</button>
+      <button class="chip" data-cat="religion">🙏 Religiosas</button>
+      <button class="chip" data-cat="decoracion">🪴 Macetas</button>
+      <button class="chip" data-cat="utilidad">🏠 Hogar</button>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Productos se inyectan con JS -->
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>Del concepto a tus manos en 4 pasos</h2>
+      <p>Un proceso simple, transparente y colaborativo. Tú aportas la idea, nosotros la hacemos realidad.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Consúltanos</h3>
+        <p>Escríbenos por WhatsApp con tu idea, foto o dibujo. Te asesoramos sin compromiso.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Diseñamos</h3>
+        <p>Modelamos tu pieza en 3D y te enviamos un preview para aprobación antes de imprimir.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Imprimimos</h3>
+        <p>Producción con materiales de alta calidad. Control de calidad en cada capa.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Entregamos</h3>
+        <p>Coordino la entrega o envío. Tu pieza lista en 24-72 horas según el proyecto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section id="por-que">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Por qué Creaciones MyD</span>
+      <h2>Más que impresión, calidad y confianza</h2>
+      <p>Cada pieza cuenta una historia. La tuya merece ser impresa con dedicación, materiales premium y atención al detalle.</p>
+    </div>
+    <div class="why-grid">
+      <div class="wcard">
+        <div class="ico">🎯</div>
+        <h3>Precisión garantizada</h3>
+        <p>Resolución profesional desde 0.12mm. Cada pieza pasa por control de calidad.</p>
+      </div>
+      <div class="wcard">
+        <div class="ico">⚡</div>
+        <h3>Entrega rápida</h3>
+        <p>La mayoría de pedidos listos en 24-48 horas. Producción express disponible.</p>
+      </div>
+      <div class="wcard">
+        <div class="ico">💎</div>
+        <h3>Materiales premium</h3>
+        <p>PLA, ABS, PETG, TPU de marcas reconocidas. Solo lo mejor para tu proyecto.</p>
+      </div>
+      <div class="wcard">
+        <div class="ico">🤝</div>
+        <h3>Asesoría gratuita</h3>
+        <p>Te ayudamos a elegir el material, color y diseño ideal para tu necesidad.</p>
+      </div>
+      <div class="wcard">
+        <div class="ico">💰</div>
+        <h3>Precios justos</h3>
+        <p>Transparentes desde el inicio. Sin sorpresas. Pago en USD, Bs o transferencias.</p>
+      </div>
+      <div class="wcard">
+        <div class="ico">🇻🇪</div>
+        <h3>Hecho en Venezuela</h3>
+        <p>Apoyando el talento local. Cada compra impulsa a un emprendedor venezolano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section style="background:var(--bg)">
+  <div class="container">
+    <div class="cta-band">
+      <h2>¿Tienes una idea en mente?</h2>
+      <p>Cuéntanos qué necesitas y te enviamos un presupuesto sin compromiso en minutos. Tu próxima pieza favorita está a un mensaje de distancia.</p>
+      <div class="actions">
+        <a class="btn btn-white" href="#" id="ctaWhatsApp">💬 WhatsApp directo</a>
+        <a class="btn btn-ghost-w" href="#catalogo">🎨 Ver catálogo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Contacto</span>
+      <h2>Hablemos de tu proyecto</h2>
+      <p>Estamos aquí para ayudarte. Elige el canal que prefieras y te respondemos lo antes posible.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Información de contacto</h3>
+        <p class="sub">Datos directos para que me escribas cuando quieras</p>
+        <div class="contact-row">
+          <div class="ico">📱</div>
+          <div class="info">
+            <b>Teléfono</b>
+            <small><a href="tel:+584123456789" id="telLink">+58 412-3456789</a> · Llamadas y mensajes</small>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ico">💬</div>
+          <div class="info">
+            <b>WhatsApp Business</b>
+            <small><a href="#" id="waLink">+58 412-3456789</a> · Respuesta en minutos</small>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ico">📍</div>
+          <div class="info">
+            <b>Ubicación</b>
+            <small>Caracas, Venezuela · Envíos a todo el país</small>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="ico">🕒</div>
+          <div class="info">
+            <b>Horarios</b>
+            <small>Lun a Vie: 9am - 6pm · Sáb: 9am - 2pm</small>
+          </div>
+        </div>
+      </div>
+      <div class="social-card">
+        <h3>Síguenos en redes</h3>
+        <p class="sub">Mira nuestros últimos proyectos, promos y detrás de cámaras</p>
+        <div class="social-grid">
+          <a class="social-btn" href="#" id="igLink" target="_blank" rel="noopener">
+            <span class="ico">📸</span>
+            <div>Instagram<small>@creaciones.myd</small></div>
+          </a>
+          <a class="social-btn" href="#" id="fbLink" target="_blank" rel="noopener">
+            <span class="ico">👍</span>
+            <div>Facebook<small>Creaciones MyD</small></div>
+          </a>
+          <a class="social-btn" href="#" id="tkLink" target="_blank" rel="noopener">
+            <span class="ico">🎵</span>
+            <div>TikTok<small>@creaciones.myd</small></div>
+          </a>
+          <a class="social-btn" href="#" id="waSocialLink" target="_blank" rel="noopener">
+            <span class="ico">💬</span>
+            <div>WhatsApp<small>Chat directo</small></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">
+        <img src="logo-512.png" alt="Creaciones MyD">
+        <div>
+          <b>Creaciones MyD</b>
+          <small>Diseño & Innovación</small>
+        </div>
+      </div>
+      <p>Emprendimiento venezolano dedicado a la impresión 3D FDM y diseño personalizado. Convertimos tus ideas en piezas tangibles con calidad, creatividad y amor por el detalle.</p>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#servicios">Impresión 3D FDM</a></li>
+        <li><a href="#servicios">Piezas personalizadas</a></li>
+        <li><a href="#servicios">Repuestos y prototipos</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#por-que">Por qué nosotros</a></li>
+        <li><a href="#proceso">Cómo trabajamos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#" id="footWaLink">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:+584123456789" id="footTelLink">📱 +58 412-3456789</a></li>
+        <li><a href="#" id="footWaLink2">💬 WhatsApp</a></li>
+        <li><a href="#" id="footIgLink" target="_blank">📸 Instagram</a></li>
+        <li><a href="#" id="footFbLink" target="_blank">👍 Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Creaciones MyD · Todos los derechos reservados</span>
+    <span>Hecho con 💚 en Venezuela · <a href="#contacto">Contáctanos</a></span>
+  </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a class="wa-float" href="#" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+// === CONFIGURACIÓN: estos datos vienen del <script> arriba ===
+var cfg = window.MYD || {
+  telefono:'+58 412-3456789',telefonoLink:'584123456789',
+  whatsapp:'584123456789',email:'contacto@creacionesmyd.com',
+  instagram:'creaciones.myd',facebook:'creaciones.myd',tiktok:'creaciones.myd',
+  direccion:'Caracas, Venezuela',horarios:'Lun a Vie: 9am - 6pm'
+};
+
+// === Aplicar datos a todos los elementos ===
+var waMsg = 'https://wa.me/' + cfg.whatsapp + '?text=' + encodeURIComponent('¡Hola Creaciones MyD! 👋 Vi su página web y quiero hacer una consulta sobre impresión 3D.');
+document.getElementById('navConsultar').href = waMsg;
+document.getElementById('heroConsultar').href = waMsg;
+document.getElementById('ctaWhatsApp').href = waMsg;
+document.getElementById('waLink').href = waMsg;
+document.getElementById('waSocialLink').href = waMsg;
+document.getElementById('waFloat').href = waMsg;
+document.getElementById('footWaLink').href = waMsg;
+document.getElementById('footWaLink2').href = waMsg;
+
+// Teléfono
+var telHref = 'tel:+' + cfg.telefonoLink;
+document.getElementById('telLink').href = telHref;
+document.getElementById('telLink').textContent = cfg.telefono;
+document.getElementById('footTelLink').href = telHref;
+document.getElementById('footTelLink').textContent = '📱 ' + cfg.telefono;
+
+// Redes sociales
+document.getElementById('igLink').href = 'https://instagram.com/' + cfg.instagram;
+document.getElementById('fbLink').href = 'https://facebook.com/' + cfg.facebook;
+document.getElementById('tkLink').href = 'https://tiktok.com/@' + cfg.tiktok;
+document.getElementById('footIgLink').href = 'https://instagram.com/' + cfg.instagram;
+document.getElementById('footFbLink').href = 'https://facebook.com/' + cfg.facebook;
+
+// === NAVBAR scroll ===
+window.addEventListener('scroll', function() {
+  var nav = document.getElementById('nav');
+  if (window.scrollY > 20) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// === BURGER MENU ===
+document.getElementById('burger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('#navLinks a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// === PRODUCTOS (catálogo) ===
+// === CÓMO AGREGAR MÁS PRODUCTOS ===
+// Solo copia una línea y cambia los valores.
+// - img: nombre del archivo en la carpeta "empresa/img/"
+// - cat: llaveros | figuras | tendencias | religion | decoracion | utilidad
+// - tag: '' (vacío) | 'hot' | 'new'
+// - price: precio en USD (sin símbolo)
+// - old: precio anterior (para mostrar oferta) o '' si no hay
+// Para fotos: sube el archivo a la carpeta "empresa/img/" en GitHub
+// y coloca aquí el nombre exacto. Recomendado 600x600px JPG.
+var products = [
+  // === LLAVEROS ===
+  {cat:'llaveros', tag:'hot', tagTxt:'Top ventas', img:'img/llavero_1.jpg', name:'Llavero Gecko Flexible', desc:'Llavero gecko articulado en colores vibrantes. Se mueve como vivo. Perfecto para regalar.', price:6, old:9},
+  {cat:'llaveros', tag:'', tagTxt:'', img:'img/llavero_2.jpg', name:'Llavero Personalizado', desc:'Llavero con tu nombre o el de quien quieras. Multi-color PLA de alta calidad.', price:5, old:''},
+  {cat:'llaveros', tag:'new', tagTxt:'Pack ahorro', img:'img/llavero_3.jpg', name:'Set 3 Llaveros Nombres', desc:'Pack de 3 llaveros con nombres personalizados. Ideal para familias o equipos.', price:12, old:18},
+  // === FIGURAS ARTICULADAS (Dragones) ===
+  {cat:'figuras', tag:'hot', tagTxt:'Top ventas', img:'img/dragon_1.jpg', name:'Dragón Articulado Láser', desc:'Dragón totalmente articulado en acabado láser verde y morado. Cuerpo flexible.', price:18, old:25},
+  {cat:'figuras', tag:'new', tagTxt:'Pack especial', img:'img/dragon_2.jpg', name:'Set 4 Dragones Articulados', desc:'Set de 4 dragones con escamas degradadas. Colección completa para regalar.', price:60, old:80},
+  {cat:'figuras', tag:'', tagTxt:'', img:'img/dragon_3.jpg', name:'Dinosaurio Articulado Rosa', desc:'Dinosaurio articulado en rosa con detalles morados. Perfecto para niños y colección.', price:15, old:''},
+  // === TENDENCIAS (Grogu/Baby Yoda) ===
+  {cat:'tendencias', tag:'hot', tagTxt:'Trending', img:'img/tendencia_1.jpg', name:'Grogu Gris Coleccionable', desc:'Figura de Grogu (Baby Yoda) en acabado gris premium. Para fans de Star Wars.', price:22, old:30},
+  {cat:'tendencias', tag:'new', tagTxt:'Nuevo', img:'img/tendencia_2.jpg', name:'Grogu Display Premium', desc:'Modelo detallado de Grogu con base. Pieza de colección de alta resolución.', price:28, old:''},
+  {cat:'tendencias', tag:'', tagTxt:'', img:'img/tendencia_3.jpg', name:'Grogu con Base Grabada', desc:'Grogu en pose con base personalizada. Perfecto para regalar a fans.', price:25, old:32},
+  // === RELIGIOSAS ===
+  {cat:'religion', tag:'hot', tagTxt:'Devocional', img:'img/religion_1.jpg', name:'Virgen María Rosa', desc:'Efigie de la Virgen María en color rosa premium. Detalle artístico excepcional.', price:35, old:45},
+  {cat:'religion', tag:'', tagTxt:'', img:'img/religion_2.jpg', name:'Virgen Mármol Clásica', desc:'Estatua con acabado mármol clásico. Detalle del velo con textura realista.', price:42, old:''},
+  {cat:'religion', tag:'new', tagTxt:'Especial', img:'img/religion_3.jpg', name:'Virgen de Guadalupe Dorada', desc:'Virgen de Guadalupe en acabado dorado brillante. Manos en oración. Para hogar o altar.', price:38, old:50},
+  // === MACETAS Y DECORACIÓN ===
+  {cat:'decoracion', tag:'hot', tagTxt:'Top ventas', img:'img/maceta_1.jpg', name:'Maceta Geométrica Beige', desc:'Maceta de pared con diseño geométrico. Incluye suculenta. Estilo minimalista.', price:14, old:20},
+  {cat:'decoracion', tag:'', tagTxt:'', img:'img/maceta_2.jpg', name:'Maceta Geométrica Clásica', desc:'Maceta con patrón geométrico en beige. Perfecta para suculentas y cactus.', price:12, old:''},
+  {cat:'decoracion', tag:'new', tagTxt:'Premium', img:'img/maceta_3.jpg', name:'Maceta Facetada Negra', desc:'Maceta con diseño facetado en negro. Estructura compleja y elegante.', price:16, old:22},
+  // === HOGAR / UTILIDAD ===
+  {cat:'utilidad', tag:'hot', tagTxt:'Top ventas', img:'img/hogar_1.jpg', name:'Organizador 2 Niveles', desc:'Organizador de escritorio de 2 niveles. Para papelería y herramientas pequeñas.', price:20, old:28},
+  {cat:'utilidad', tag:'', tagTxt:'', img:'img/hogar_2.jpg', name:'Portalápices Morado', desc:'Portalápices en color morado premium con bandeja. Para tu escritorio creativo.', price:11, old:''},
+  {cat:'utilidad', tag:'new', tagTxt:'Nuevo', img:'img/hogar_3.jpg', name:'Organizador Blanco y Negro', desc:'Organizador multifunción con compartimentos. Para lapiceros, notas y accesorios.', price:15, old:20}
+];
+
+function renderProducts(filter) {
+  var html = '';
+  var filtered = filter === 'all' ? products : products.filter(function(p){return p.cat === filter});
+  if (filtered.length === 0) {
+    html = '<p style="grid-column:1/-1;text-align:center;color:var(--mut);padding:40px">No hay productos en esta categoría todavía.</p>';
+  }
+  filtered.forEach(function(p, i) {
+    var oldPrice = p.old ? '<small>$' + p.old + '</small>' : '';
+    var tagHtml = p.tag ? '<span class="tag ' + p.tag + '">' + p.tagTxt + '</span>' : '';
+    var waProduct = 'https://wa.me/' + cfg.whatsapp + '?text=' + encodeURIComponent('¡Hola! 👋 Vi en su catálogo el producto "' + p.name + '" ($' + p.price + ' USD) y quiero más información.');
+    html += '<div class="pcard" data-cat="' + p.cat + '">' +
+              '<div class="img">' + tagHtml + '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy"></div>' +
+              '<div class="body">' +
+                '<h3>' + p.name + '</h3>' +
+                '<p class="desc">' + p.desc + '</p>' +
+                '<div class="price-row"><span class="price">' + oldPrice + '$' + p.price + '</span></div>' +
+                '<a class="btn-consultar" href="' + waProduct + '" target="_blank" rel="noopener">💬 Consultar</a>' +
+              '</div>' +
+            '</div>';
+  });
+  document.getElementById('productsGrid').innerHTML = html;
+}
+
+// Filtros del catálogo
+document.querySelectorAll('.chip').forEach(function(chip) {
+  chip.addEventListener('click', function() {
+    document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
+    chip.classList.add('active');
+    renderProducts(chip.dataset.cat);
+  });
+});
+
+renderProducts('all');
+
+// Animación de aparición al hacer scroll
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.scard, .pcard, .step, .wcard').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity .5s, transform .5s';
+    io.observe(el);
+  });
+}
+</script>
+</body>
+</html>
