@@ -23,9 +23,9 @@
 <meta property="og:site_name" content="Creaciones MyD">
 <meta property="og:title" content="Creaciones MyD · Impresión 3D & Diseño Personalizado">
 <meta property="og:description" content="Piezas únicas, regalos personalizados, prototipos y repuestos a tu medida. Calidad y creatividad en cada impresión 3D.">
-<meta property="og:url" content="https:creaciones-myd.vercel.app/">
-<meta property="og:image" content="https://creaciones-myd.vercel.app/og-image.png">
-<meta property="og:image:secure_url" content="https://creaciones-myd.vercel.app/og-image.png">
+<meta property="og:url" content="https://creacionesmyd.vercel.app">
+<meta property="og:image" content="https://creacionesmyd.vercel.app/og-image.png">
+<meta property="og:image:secure_url" content="https://creacionesmyd.vercel.app/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Creaciones MyD · Impresión 3D & Diseño Personalizado">
 <meta name="twitter:description" content="Piezas únicas, regalos personalizados y prototipos a tu medida. Calidad y creatividad en cada impresión 3D.">
-<meta name="twitter:image" content="https://creaciones-myd.vercel.app/og-image.png">
+<meta name="twitter:image" content="https://creacionesmyd.vercel.app/og-image.png">
 <meta name="twitter:image:alt" content="Creaciones MyD - Impresión 3D">
 
 <!-- ===== CONFIGURA AQUÍ TUS DATOS =====
@@ -422,6 +422,119 @@ section{padding:100px 24px;position:relative}
 .wcard h3{font-size:17px;margin-bottom:8px;font-weight:700}
 .wcard p{color:var(--mut);font-size:14px;line-height:1.5}
 
+/* === SOBRE NOSOTROS === */
+#sobre{background:var(--bg-alt)}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;
+}
+.about-visual{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+  min-height:380px;
+}
+.about-visual .circle-bg{
+  position:absolute;width:340px;height:340px;border-radius:50%;
+  background:var(--gradient-mix);background-size:200% 200%;
+  animation:gradientShift 18s ease infinite;
+  filter:blur(40px);opacity:.25;
+}
+.about-visual .logo-frame{
+  position:relative;z-index:2;
+  width:280px;height:280px;border-radius:50%;
+  background:#fff;padding:18px;
+  box-shadow:0 20px 50px rgba(74,155,142,.25);
+  display:flex;align-items:center;justify-content:center;
+}
+.about-visual .logo-frame img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+.about-visual .badge-flotante{
+  position:absolute;bottom:30px;right:-10px;z-index:3;
+  background:#fff;border-radius:14px;padding:12px 18px;
+  box-shadow:var(--shadow);font-weight:800;font-size:14px;
+  display:flex;align-items:center;gap:8px;color:var(--teal-dark);
+}
+.about-visual .badge-flotante .emoji{font-size:24px}
+.about-content h2{
+  font-size:clamp(28px,4vw,40px);margin-bottom:18px;
+  font-weight:900;letter-spacing:-0.02em;line-height:1.15;
+}
+.about-content .lead{
+  font-size:18px;color:var(--txt-soft);margin-bottom:24px;line-height:1.6;
+}
+.about-content p{color:var(--mut);margin-bottom:18px;line-height:1.7}
+.about-stats{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;
+  margin-top:32px;padding-top:32px;border-top:1px solid var(--line);
+}
+.about-stat b{font-size:30px;font-weight:900;
+  background:var(--gradient-mix);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+  display:block;line-height:1;
+}
+.about-stat small{color:var(--mut);font-size:13px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.05em;
+}
+
+/* === TESTIMONIOS === */
+#testimonios{background:linear-gradient(180deg,var(--bg) 0%,var(--teal-pale) 100%)}
+.test-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;
+}
+.tcard{
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid rgba(74,155,142,.25);
+  border-radius:var(--r);padding:28px 26px;
+  box-shadow:var(--glass-shadow);position:relative;
+  transition:transform .25s,box-shadow .25s;
+}
+.tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.tcard .stars{color:#FFB800;font-size:18px;margin-bottom:14px;letter-spacing:2px}
+.tcard .quote{color:var(--txt-soft);font-size:15.5px;line-height:1.65;margin-bottom:20px;font-style:italic}
+.tcard .quote::before{content:'"';font-size:48px;color:var(--teal);line-height:0;
+  vertical-align:-18px;margin-right:4px;font-family:Georgia,serif}
+.tcard .author{display:flex;align-items:center;gap:12px}
+.tcard .avatar{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--gradient-warm);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:18px;
+}
+.tcard .author-info b{display:block;font-size:15px;font-weight:700}
+.tcard .author-info small{color:var(--mut);font-size:13px}
+.tcard .product-tag{
+  display:inline-block;background:var(--teal-pale);color:var(--teal-dark);
+  padding:3px 10px;border-radius:99px;font-size:11px;font-weight:700;
+  margin-top:10px;
+}
+
+/* === FAQ === */
+#faq{background:var(--bg-alt)}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border:1px solid rgba(74,155,142,.2);
+  border-radius:var(--r-sm);padding:20px 24px;margin-bottom:12px;
+  box-shadow:var(--shadow-sm);overflow:hidden;
+  transition:max-height .3s;
+}
+.faq-item summary{
+  font-weight:800;font-size:17px;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+  color:var(--txt);
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:'+';font-size:28px;color:var(--teal);font-weight:900;
+  transition:transform .25s;flex-shrink:0;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{
+  color:var(--mut);font-size:15px;line-height:1.6;margin-top:14px;
+  padding-top:14px;border-top:1px dashed var(--line);
+}
+.faq-item p strong{color:var(--teal-dark)}
+
 /* === CTA SECTION === */
 .cta-band{
   background:var(--gradient-mix);
@@ -584,6 +697,9 @@ footer ul li a:hover{color:var(--orange-light)}
   .hero .lead{margin-left:auto;margin-right:auto}
   .contact-grid{grid-template-columns:1fr}
   .foot-inner{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-content{text-align:center}
+  .about-stats{grid-template-columns:1fr 1fr 1fr;gap:14px}
 }
 @media (max-width:680px){
   .nav .links{display:none}
@@ -623,8 +739,9 @@ footer ul li a:hover{color:var(--orange-light)}
     <div class="links" id="navLinks">
       <a href="#servicios">Servicios</a>
       <a href="#catalogo">Catálogo</a>
-      <a href="#proceso">Cómo trabajamos</a>
-      <a href="#por-que">Por qué nosotros</a>
+      <a href="#sobre">Sobre nosotros</a>
+      <a href="#testimonios">Opiniones</a>
+      <a href="#faq">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </div>
     <div class="cta">
@@ -822,6 +939,183 @@ footer ul li a:hover{color:var(--orange-light)}
   </div>
 </section>
 
+<!-- SOBRE NOSOTROS -->
+<section id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="circle-bg"></div>
+        <div class="logo-frame">
+          <img src="logo-512.png" alt="Creaciones MyD">
+        </div>
+        <div class="badge-flotante">
+          <span class="emoji">🇻🇪</span>
+          <span>Hecho en Venezuela</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="sec-head"><span class="eyebrow" style="margin-bottom:16px">Sobre nosotros</span></span>
+        <h2>Nuestra historia, tu historia</h2>
+        <p class="lead">Lo que empezó como un hobby en una esquina del cuarto, hoy es un taller dedicado a transformar ideas en piezas tangibles que alegran la vida.</p>
+        <p>Somos <strong>Creaciones MyD</strong>, un emprendimiento venezolano apasionado por la impresión 3D y el diseño. Cada pieza que sale de nuestras impresoras lleva algo más que filamento: lleva horas de aprendizaje, dedicación y el deseo de que tú, cliente, sientas que recibiste algo único, hecho solo para ti.</p>
+        <p>Trabajamos con materiales premium, controlamos cada capa, cuidamos cada detalle. Desde un llavero personalizado hasta una figura de colección o una imagen religiosa, todo pasa por nuestras manos con la misma pasión.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <b>+500</b>
+            <small>Piezas impresas</small>
+          </div>
+          <div class="about-stat">
+            <b>+200</b>
+            <small>Clientes felices</small>
+          </div>
+          <div class="about-stat">
+            <b>4.9★</b>
+            <small>Calificación</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Opiniones de clientes</span>
+      <h2>Lo que dicen de nosotros</h2>
+      <p>Cada cliente es una historia. Estas son algunas de las personas que confiaron en nosotros y volverían a hacerlo.</p>
+    </div>
+    <div class="test-grid">
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Encantada con mi dragón articulado! Quedó igualito a la foto y me llegó rapidísimo. Mario me asesoró en todo momento. Volveré a comprar sin duda.</p>
+        <div class="author">
+          <div class="avatar">M</div>
+          <div class="author-info">
+            <b>María González</b>
+            <small>Caracas · Hace 2 semanas</small>
+          </div>
+        </div>
+        <span class="product-tag">🐲 Dragón Articulado</span>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Pedí unos llaveros con los nombres de mis hijos para el día del padre. Excelente calidad, colores vibrantes y el dueño súper atento. Mi esposo los amó.</p>
+        <div class="author">
+          <div class="avatar">C</div>
+          <div class="author-info">
+            <b>Carolina Pérez</b>
+            <small>Valencia · Hace 1 mes</small>
+          </div>
+        </div>
+        <span class="product-tag">🔑 Llaveros personalizados</span>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Compré la Virgen de Guadalupe para mi mamá y se emocionó. El acabado dorado es precioso, se nota el trabajo bien hecho. Recomendadísimo.</p>
+        <div class="author">
+          <div class="avatar">J</div>
+          <div class="author-info">
+            <b>José Rodríguez</b>
+            <small>Maracaibo · Hace 3 semanas</small>
+          </div>
+        </div>
+        <span class="product-tag">🙏 Virgen de Guadalupe</span>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Excelente trabajo con el organizador de mi escritorio. Llegó impecable y en el tiempo prometido. Ahora tengo todo ordenado. 100% recomendados.</p>
+        <div class="author">
+          <div class="avatar">A</div>
+          <div class="author-info">
+            <b>Andrea Martínez</b>
+            <small>Caracas · Hace 2 meses</small>
+          </div>
+        </div>
+        <span class="product-tag">🏠 Organizador escritorio</span>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Pedí un Grogu para mi novio fan de Star Wars y quedó espectacular. El detalle es increíble, parece de tienda pero más personalizado. Lo amó.</p>
+        <div class="author">
+          <div class="avatar">L</div>
+          <div class="author-info">
+            <b>Luisana Díaz</b>
+            <small>Barquisimeto · Hace 1 semana</small>
+          </div>
+        </div>
+        <span class="product-tag">⭐ Grogu/Baby Yoda</span>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">La maceta geométrica es hermosa. Mi suculenta quedó elegante. Material resistente y el diseño es único. Ya quiero pedir otra para la cocina.</p>
+        <div class="author">
+          <div class="avatar">S</div>
+          <div class="author-info">
+            <b>Sofía Ramírez</b>
+            <small>Maracay · Hace 5 semanas</small>
+          </div>
+        </div>
+        <span class="product-tag">🪴 Maceta geométrica</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Resolvemos tus dudas</h2>
+      <p>Las preguntas más comunes que nos hacen. Si tienes otra, escríbenos por WhatsApp.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>¿Cuánto tarda en estar lista mi pieza?</summary>
+        <p>Depende del tamaño y complejidad. La mayoría de piezas están listas en <strong>24 a 72 horas</strong>. Piezas grandes o pedidos de varias unidades pueden tomar hasta una semana. Te decimos el tiempo exacto al confirmar tu pedido.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen envíos a todo el país?</summary>
+        <p><strong>Sí, enviamos a todo Venezuela.</strong> Trabajamos con Zoom, Tealca y MRW. El costo del envío se calcula según tu ubicación y el peso del paquete. También puedes coordinar retiro en Caracas si prefieres.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué materiales usan?</summary>
+        <p>Trabajamos con los mejores materiales del mercado: <strong>PLA</strong> (ideal para piezas decorativas y regalos), <strong>PETG</strong> (resistente, para piezas que aguantan uso), <strong>ABS</strong> (para piezas técnicas) y <strong>TPU</strong> (flexible, para fundas y piezas que se doblan). Te recomendamos el mejor según tu uso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo personalizar el color y diseño?</summary>
+        <p><strong>¡Por supuesto!</strong> Esa es nuestra especialidad. Tienes más de 20 colores disponibles en PLA, y podemos diseñar desde cero cualquier pieza que imagines. Solo mándanos una foto, dibujo o descríbenos tu idea y la hacemos realidad.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué formas de pago aceptan?</summary>
+        <p>Aceptamos <strong>pago móvil, transferencias bancarias (Bs y USD), Zelle, PayPal y Binance</strong>. Para clientes en Caracas también aceptamos efectivo. El pago se realiza al confirmar el pedido, antes de iniciar la impresión.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Las piezas son resistentes al agua y al sol?</summary>
+        <p>El <strong>PLA</strong> no es ideal para exteriores (se deforma con mucho sol). Si tu pieza va al exterior, te recomendamos <strong>PETG o ABS</strong> que aguantan mejor. Para macetas o piezas que tocan agua, aplicamos un sellador protector. Consúltanos y te orientamos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen descuentos por cantidad?</summary>
+        <p><strong>Sí.</strong> A partir de 5 piezas iguales aplicamos 10% de descuento. Para 10 o más, 15%. Si necesitas producción en serie (más de 20 unidades), te hacemos una cotización especial.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo ver la pieza antes de pagar?</summary>
+        <p><strong>Sí.</strong> Para piezas personalizadas, te enviamos por WhatsApp un render 3D o foto del diseño para tu aprobación antes de imprimir. Solo iniciamos la impresión cuando estás 100% conforme con el diseño.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tienen garantía?</summary>
+        <p><strong>Sí, todos nuestros productos tienen garantía de 7 días</strong> por defectos de fabricación. Si tu pieza llega dañada o con algún defecto, la reemplazamos sin costo. La garantía no cubre mal uso ni exposición incorrecta.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo llevar mi propio modelo STL?</summary>
+        <p><strong>¡Por supuesto!</strong> Si tienes un archivo STL, OBJ o 3MF, mándanoslo por WhatsApp y lo imprimimos. Te damos el presupuesto según tiempo de impresión y material. También podemos modelar la pieza si solo tienes una idea o foto.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <section style="background:var(--bg)">
   <div class="container">
@@ -928,10 +1222,11 @@ footer ul li a:hover{color:var(--orange-light)}
     <div>
       <h4>Empresa</h4>
       <ul>
-        <li><a href="#por-que">Por qué nosotros</a></li>
+        <li><a href="#sobre">Sobre nosotros</a></li>
+        <li><a href="#testimonios">Opiniones</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
         <li><a href="#proceso">Cómo trabajamos</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#" id="footWaLink">WhatsApp</a></li>
       </ul>
     </div>
     <div>
