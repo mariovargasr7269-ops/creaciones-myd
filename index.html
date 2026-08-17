@@ -1333,7 +1333,25 @@ var products = [
   // === HOGAR / UTILIDAD ===
   {cat:'utilidad', tag:'hot', tagTxt:'Top ventas', img:'img/hogar_1.jpg', name:'Organizador 2 Niveles', desc:'Organizador de escritorio de 2 niveles. Para papelería y herramientas pequeñas.', price:20, old:28},
   {cat:'utilidad', tag:'', tagTxt:'', img:'img/hogar_2.jpg', name:'Portalápices Morado', desc:'Portalápices en color morado premium con bandeja. Para tu escritorio creativo.', price:11, old:''},
-  {cat:'utilidad', tag:'new', tagTxt:'Nuevo', img:'img/hogar_3.jpg', name:'Organizador Blanco y Negro', desc:'Organizador multifunción con compartimentos. Para lapiceros, notas y accesorios.', price:15, old:20}
+  {cat:'utilidad', tag:'new', tagTxt:'Nuevo', img:'img/hogar_3.jpg', name:'Organizador Blanco y Negro', desc:'Organizador multifunción con compartimentos. Para lapiceros, notas y accesorios.', price:15, old:20},
+
+  // === PRODUCTOS EXTRA (sin foto, usan emoji como placeholder) ===
+  // Para reemplazar: solo cambia el "img" por la ruta de tu foto
+  // Ejemplo: img:'img/mi_producto.jpg'
+  {cat:'llaveros', tag:'hot', tagTxt:'Top ventas', img:'emoji:🦄', name:'Llavero Unicornio', desc:'Llavero mágico con cuerno brillante. Disponible en pastel y arcoíris. Para soñar.', price:7, old:10},
+  {cat:'llaveros', tag:'new', tagTxt:'Nuevo', img:'emoji:❤️', name:'Llavero Corazón Pareja', desc:'Set de 2 llaveros corazón con nombres. Mitades que se unen. Para parejas y amigos.', price:10, old:14},
+  {cat:'llaveros', tag:'', tagTxt:'', img:'emoji:🌸', name:'Llavero Flor Premium', desc:'Llavero con flor detallada en PLA silk. Pétalos flexibles. Disponible en 6 colores.', price:6, old:''},
+  {cat:'figuras', tag:'hot', tagTxt:'Trending', img:'emoji:🦖', name:'T-Rex Articulado', desc:'T-Rex totalmente articulado en una sola pieza. Cuerpo flexible. Color a elección.', price:20, old:28},
+  {cat:'figuras', tag:'new', tagTxt:'Nuevo', img:'emoji:🐈', name:'Gato Articulado', desc:'Gato articulado que mueve su cuerpo como real. Acabado silk. Disponible en 5 colores.', price:18, old:''},
+  {cat:'figuras', tag:'', tagTxt:'', img:'emoji:🦋', name:'Mariposa Articulada', desc:'Mariposa con alas flexibles que se mueven. Decorativa y coleccionable.', price:14, old:20},
+  {cat:'tendencias', tag:'hot', tagTxt:'Trending', img:'emoji:🤖', name:'Robot Mini Coleccionable', desc:'Robot articulado estilo retro. Varios modelos disponibles. Para coleccionistas.', price:16, old:''},
+  {cat:'tendencias', tag:'new', tagTxt:'Nuevo', img:'emoji:👾', name:'Alien Pixelado', desc:'Figura retro de alien estilo videojuego. Para fans de la cultura pop y gaming.', price:13, old:18},
+  {cat:'religion', tag:'hot', tagTxt:'Devocional', img:'emoji:✝️', name:'Cruz Cristo Premium', desc:'Cruz decorativa con detalle de Cristo. Acabado mate. Para hogar, altar o regalo.', price:25, old:32},
+  {cat:'religion', tag:'', tagTxt:'', img:'emoji:👼', name:'Ángel Guardián', desc:'Figura de ángel guardián con alas detalladas. Ideal para habitación infantil o regalo.', price:28, old:''},
+  {cat:'decoracion', tag:'new', tagTxt:'Nuevo', img:'emoji:🪴', name:'Maceta Groot', desc:'Maceta con forma de Groot sosteniendo tu planta. Diseño divertido y detallado.', price:18, old:25},
+  {cat:'decoracion', tag:'hot', tagTxt:'Top ventas', img:'emoji:🌙', name:'Lampara Luna LED', desc:'Lámpara con forma de luna y luz LED cálida. Perfecta para habitaciones y regalo.', price:24, old:30},
+  {cat:'utilidad', tag:'new', tagTxt:'Nuevo', img:'emoji:☕', name:'Posavasos Set 4', desc:'Set de 4 posavasos con diseño único. Protege tus muebles con estilo. Regalo ideal.', price:14, old:20},
+  {cat:'utilidad', tag:'', tagTxt:'', img:'emoji:📱', name:'Soporte Celular Plegable', desc:'Soporte universal para celular. Plegable y portable. Para videollamadas y series.', price:8, old:''}
 ];
 
 function renderProducts(filter) {
@@ -1346,8 +1364,18 @@ function renderProducts(filter) {
     var oldPrice = p.old ? '<small>$' + p.old + '</small>' : '';
     var tagHtml = p.tag ? '<span class="tag ' + p.tag + '">' + p.tagTxt + '</span>' : '';
     var waProduct = 'https://wa.me/' + cfg.whatsapp + '?text=' + encodeURIComponent('¡Hola! 👋 Vi en su catálogo el producto "' + p.name + '" ($' + p.price + ' USD) y quiero más información.');
+    // Detectar si el producto usa emoji (placeholder) o imagen real
+    var imgHtml;
+    if (p.img.indexOf('emoji:') === 0) {
+      // Es un emoji - mostrar grande con fondo degradado
+      var emoji = p.img.substring(6); // quitar 'emoji:'
+      imgHtml = '<span class="emoji">' + emoji + '</span>';
+    } else {
+      // Es una imagen real
+      imgHtml = '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy">';
+    }
     html += '<div class="pcard" data-cat="' + p.cat + '">' +
-              '<div class="img">' + tagHtml + '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy"></div>' +
+              '<div class="img">' + tagHtml + imgHtml + '</div>' +
               '<div class="body">' +
                 '<h3>' + p.name + '</h3>' +
                 '<p class="desc">' + p.desc + '</p>' +
@@ -1365,13 +1393,20 @@ document.querySelectorAll('.chip').forEach(function(chip) {
     document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
     chip.classList.add('active');
     renderProducts(chip.dataset.cat);
+    // Re-aplicar animación a los nuevos productos
+    setTimeout(setupScrollAnimation, 30);
   });
 });
 
 renderProducts('all');
+// Aplicar animación a los productos iniciales
+setTimeout(setupScrollAnimation, 50);
 
 // Animación de aparición al hacer scroll
-if ('IntersectionObserver' in window) {
+// IMPORTANTE: Esta función se ejecuta DESPUÉS de renderProducts
+// para que observe las tarjetas ya creadas
+function setupScrollAnimation() {
+  if (!('IntersectionObserver' in window)) return;
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting) {
@@ -1381,13 +1416,17 @@ if ('IntersectionObserver' in window) {
       }
     });
   }, {threshold: 0.1});
-  document.querySelectorAll('.scard, .pcard, .step, .wcard').forEach(function(el) {
+  document.querySelectorAll('.scard, .pcard, .step, .wcard, .tcard').forEach(function(el) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity .5s, transform .5s';
     io.observe(el);
   });
 }
+
+// Re-ejecutar la animación después de renderizar productos
+// (le damos 50ms para que el DOM se actualice)
+setTimeout(setupScrollAnimation, 50);
 </script>
 </body>
 </html>
