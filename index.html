@@ -45,14 +45,14 @@
      Reemplaza los valores de estos JS variables con tus datos reales -->
 <script>
 window.MYD = {
-  telefono: '+58 424-8591670',           // ← tu número real
-  telefonoLink: '584248591670',          // ← solo dígitos, sin + ni espacios
-  whatsapp: '584248591670',              // ← tu WhatsApp (solo dígitos)
-  email: 'creacionesmyd6972@gmail.com',  // ← tu email
-  instagram: 'creacionesmyd',          // ← tu usuario de Instagram (sin @)
-  facebook: 'creacionesmyd',            // ← tu página de Facebook
-  tiktok: 'creacionesmyd',             // ← tu usuario de TikTok
-  direccion: 'Nueva Esparta, Venezuela',      // ← tu ubicación
+  telefono: '+58 412-3456789',           // ← tu número real
+  telefonoLink: '584123456789',          // ← solo dígitos, sin + ni espacios
+  whatsapp: '584123456789',              // ← tu WhatsApp (solo dígitos)
+  email: 'contacto@creacionesmyd.com',  // ← tu email
+  instagram: 'creaciones.myd',          // ← tu usuario de Instagram (sin @)
+  facebook: 'creaciones.myd',            // ← tu página de Facebook
+  tiktok: 'creaciones.myd',             // ← tu usuario de TikTok
+  direccion: 'Caracas, Venezuela',      // ← tu ubicación
   horarios: 'Lun a Vie: 9am - 6pm · Sáb: 9am - 2pm'
 };
 </script>
@@ -1157,17 +1157,24 @@ footer ul li a:hover{color:var(--orange-light)}
           </div>
         </div>
         <div class="contact-row">
+          <div class="ico">📧</div>
+          <div class="info">
+            <b>Email</b>
+            <small><a href="mailto:contacto@creacionesmyd.com" id="emailLink">contacto@creacionesmyd.com</a> · Escribenos</small>
+          </div>
+        </div>
+        <div class="contact-row">
           <div class="ico">📍</div>
           <div class="info">
             <b>Ubicación</b>
-            <small>Caracas, Venezuela · Envíos a todo el país</small>
+            <small id="ubicacionTxt">Caracas, Venezuela · Envíos a todo el país</small>
           </div>
         </div>
         <div class="contact-row">
           <div class="ico">🕒</div>
           <div class="info">
             <b>Horarios</b>
-            <small>Lun a Vie: 9am - 6pm · Sáb: 9am - 2pm</small>
+            <small id="horariosTxt">Lun a Vie: 9am - 6pm · Sáb: 9am - 2pm</small>
           </div>
         </div>
       </div>
@@ -1177,15 +1184,15 @@ footer ul li a:hover{color:var(--orange-light)}
         <div class="social-grid">
           <a class="social-btn" href="#" id="igLink" target="_blank" rel="noopener">
             <span class="ico">📸</span>
-            <div>Instagram<small>@creaciones.myd</small></div>
+            <div>Instagram<small id="igNameTxt">@creaciones.myd</small></div>
           </a>
           <a class="social-btn" href="#" id="fbLink" target="_blank" rel="noopener">
             <span class="ico">👍</span>
-            <div>Facebook<small>Creaciones MyD</small></div>
+            <div>Facebook<small id="fbNameTxt">Creaciones MyD</small></div>
           </a>
           <a class="social-btn" href="#" id="tkLink" target="_blank" rel="noopener">
             <span class="ico">🎵</span>
-            <div>TikTok<small>@creaciones.myd</small></div>
+            <div>TikTok<small id="tkNameTxt">@creaciones.myd</small></div>
           </a>
           <a class="social-btn" href="#" id="waSocialLink" target="_blank" rel="noopener">
             <span class="ico">💬</span>
@@ -1285,10 +1292,21 @@ setText('telLink', cfg.telefono);
 setHref('footTelLink', telHref);
 setText('footTelLink', '📱 ' + cfg.telefono);
 
-// Redes sociales
+// Email
+setHref('emailLink', 'mailto:' + cfg.email);
+setText('emailLink', cfg.email);
+
+// Ubicación y horarios (texto dinámico)
+setText('ubicacionTxt', cfg.direccion + ' · Envíos a todo el país');
+setText('horariosTxt', cfg.horarios);
+
+// Redes sociales - actualizar enlaces Y los nombres mostrados
 setHref('igLink', 'https://instagram.com/' + cfg.instagram);
+setText('igNameTxt', '@' + cfg.instagram);
 setHref('fbLink', 'https://facebook.com/' + cfg.facebook);
+setText('fbNameTxt', cfg.facebook);
 setHref('tkLink', 'https://tiktok.com/@' + cfg.tiktok);
+setText('tkNameTxt', '@' + cfg.tiktok);
 setHref('footIgLink', 'https://instagram.com/' + cfg.instagram);
 setHref('footFbLink', 'https://facebook.com/' + cfg.facebook);
 
